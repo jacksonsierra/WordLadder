@@ -1,0 +1,14 @@
+static void runWordLadder();
+
+runWordLadder();
+
+static void runWordLadder() {
+	Lexicon dictionary("dictionary.txt");
+	string sourceWord;
+	string destinationWord;
+
+	sourceWord = getWord(dictionary, "Please enter the source word [return to quit]: ");
+	destinationWord = getWord(dictionary, "Please enter the destination word [return to quit]: ");
+	checkWordEndpoints(dictionary, sourceWord, destinationWord);
+	findWordLadder(dictionary, sourceWord, destinationWord);
+}
